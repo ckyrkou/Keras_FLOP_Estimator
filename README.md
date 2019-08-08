@@ -7,10 +7,12 @@ This is a function for estimating the floating point operations (FLOPS) of deep 
 
 ```python
 
-K.clear_session()
+from keras.applications.mobilenetv2 import MobileNetV2
+
 model = MobileNetV2(weights=None, include_top=True, pooling=None,input_shape=(224,224,3))
 model.summary()
 
+#Prints a table with the FLOPS at each layer and total FLOPs
 net_flops(model)
 
 ```
