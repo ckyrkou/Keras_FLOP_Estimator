@@ -1,5 +1,17 @@
-# Keras_FLOP_Estimator
+FLOP Estimator for Keras Models
 This is a function for estimating the floating point operations (FLOPS) of deep learning models developed with keras. It supports some basic layers such as Convolutional, Separable Convolution, Depthwise Convolution, BatchNormalization, Activations, and Merge Layers (Add, Max, Concatenate)
+
+# Usage
+
+```python
+
+K.clear_session()
+model = MobileNetV2(weights=None, include_top=True, pooling=None,input_shape=(224,224,3))
+model.summary()
+
+net_flops(model)
+
+```
 
 
 # Resources:
