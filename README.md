@@ -21,6 +21,34 @@ net_flops(model)
 
 ```
 
+### Output
+   Layer Name |      Input Shape |     Output Shape |      Kernel Size |          Filters | Strides | BFLOPS
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                  input_2 |    [224, 224, 3] |    [224, 224, 3] |           [0, 0] |           [0, 0] | [1, 1] | 0.0000
+                Conv1_pad |     ['', '', ''] |     ['', '', ''] |           [0, 0] |           [0, 0] | [1, 1] | 0.0000
+                    Conv1 |    [225, 225, 3] |   [112, 112, 32] |           (3, 3) |               32 | (2, 2) | 21.8700
+                 bn_Conv1 |   [112, 112, 32] |   [112, 112, 32] |           [0, 0] |           [0, 0] | [1, 1] | 0.4014
+               Conv1_relu |   [112, 112, 32] |   [112, 112, 32] |           [0, 0] |           [0, 0] | [1, 1] | 0.4014
+  expanded_conv_depthwise |   [112, 112, 32] |   [112, 112, 32] |           (3, 3) |               32 | (1, 1) | 7.2253
+expanded_conv_depthwise_BN |   [112, 112, 32] |   [112, 112, 32] |           [0, 0] |           [0, 0] | [1, 1] | 0.4014
+expanded_conv_depthwise_relu |   [112, 112, 32] |   [112, 112, 32] |           [0, 0] |           [0, 0] | [1, 1] | 0.4014
+    expanded_conv_project |   [112, 112, 32] |   [112, 112, 16] |           (1, 1) |               16 | (1, 1) | 12.8451
+ expanded_conv_project_BN |   [112, 112, 16] |   [112, 112, 16] |           [0, 0] |           [0, 0] | [1, 1] | 0.2007
+           block_1_expand |   [112, 112, 16] |   [112, 112, 96] |           (1, 1) |               96 | (1, 1) | 38.5352
+        block_1_expand_BN |   [112, 112, 96] |   [112, 112, 96] |           [0, 0] |           [0, 0] | [1, 1] | 1.2042
+      block_1_expand_relu |   [112, 112, 96] |   [112, 112, 96] |           [0, 0] |           [0, 0] | [1, 1] | 1.2042
+              block_1_pad |     ['', '', ''] |     ['', '', ''] |           [0, 0] |           [0, 0] | [1, 1] | 0.0000
+        block_1_depthwise |   [113, 113, 96] |     [56, 56, 96] |           (3, 3) |               96 | (2, 2) | 5.5162
+     block_1_depthwise_BN |     [56, 56, 96] |     [56, 56, 96] |           [0, 0] |           [0, 0] | [1, 1] | 0.3011
+   block_1_depthwise_relu |     [56, 56, 96] |     [56, 56, 96] |           [0, 0] |           [0, 0] | [1, 1] | 0.3011
+          block_1_project |     [56, 56, 96] |     [56, 56, 24] |           (1, 1) |               24 | (1, 1) | 14.4507
+       block_1_project_BN |     [56, 56, 24] |     [56, 56, 24] |           [0, 0] |           [0, 0] | [1, 1] | 0.0753
+           block_2_expand |     [56, 56, 24] |    [56, 56, 144] |           (1, 1) |              144 | (1, 1) | 21.6760
+        block_2_expand_BN |    [56, 56, 144] |    [56, 56, 144] |           [0, 0] |           [0, 0] | [1, 1] | 0.4516
+      block_2_expand_relu |    [56, 56, 144] |    [56, 56, 144] |           [0, 0] |           [0, 0] | [1, 1] | 0.4516
+        block_2_depthwise |    [56, 56, 144] |    [56, 56, 144] |           (3, 3) |              144 | (1, 1) | 8.1285
+
+
 # Keras Model Timing Performannce Per Layer
 
 This is a function for estimating the timing performance of each leayer in a neural network. It can be used to identify the bottlenecks in computation when run on the target device. The function iterates over the network by runninng an input image through it by removing each of the layers. The layer time is found by subtracting the current run without the last layer from the previous run that contained the layer. There are some timing issues where the timings are off a bit thus some times may appear as negative. In such, case the layer compute time can be considered as negligible.
@@ -52,6 +80,7 @@ plt.xticks(x_pos, x,rotation=90)
 plt.show()
 
 ```
+### Output Graph
 
 <img src="./Figures/VGG16_timings.png" width="512">
 
