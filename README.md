@@ -1,6 +1,8 @@
 # Performance Estimator for Keras Models
 *WARNING - Under Construction
 
+Developed and tested on keras 2.2.4.
+
 # Keras FLOP Estimator
 
 This is a function for estimating the floating point operations (FLOPS) of deep learning models developed with keras. It supports some basic layers such as Convolutional, Separable Convolution, Depthwise Convolution, BatchNormalization, Activations, and Merge Layers (Add, Max, Concatenate)
@@ -28,10 +30,30 @@ This is a function for estimating the timing performance of each leayer in a neu
 ```python
 
 from keras.applications.vgg16 import VGG16
+model = VGG16(weights='imagenet', include_top=False)
 
+times = time_per_layer(model)
 
+# Visualize
+
+import matplotlib.pyplot as plt
+
+plt.style.use('ggplot')
+x = [model.layers[-i].name for i in range(1,len(model.layers))]
+#x = [i for i in range(1,len(model.layers))]
+g = [times[i,0] for i in range(1,len(times))]
+x_pos = np.arange(len(x))
+plt.bar(x, g, color='#7ed6df')
+plt.xlabel("Layers")
+plt.ylabel("Processing Time")
+plt.title("Processing Time of each Layer")
+plt.xticks(x_pos, x,rotation=90)
+
+plt.show()
 
 ```
+
+![VGG16 timings][./Figures/VGG16_timings.png]
 
 # Resources:
 1. [Convolutional Neural Networks Cheatsheet](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
