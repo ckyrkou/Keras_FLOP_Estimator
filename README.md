@@ -1,9 +1,11 @@
 # Performance Estimator for Keras Models
 *WARNING - Under Construction
 
+# Keras FLOP Estimator
+
 This is a function for estimating the floating point operations (FLOPS) of deep learning models developed with keras. It supports some basic layers such as Convolutional, Separable Convolution, Depthwise Convolution, BatchNormalization, Activations, and Merge Layers (Add, Max, Concatenate)
 
-# Usage
+## Usage
 
 ```python
 
@@ -17,6 +19,19 @@ net_flops(model)
 
 ```
 
+# Keras Model Timing Performannce Per Layer
+
+This is a function for estimating the floating point operations (FLOPS) of deep learning models developed with keras. It supports some basic layers such as Convolutional, Separable Convolution, Depthwise Convolution, BatchNormalization, Activations, and Merge Layers (Add, Max, Concatenate)
+
+## Usage
+
+```python
+
+from keras.applications.vgg16 import VGG16
+
+
+
+```
 
 # Resources:
 1. [Convolutional Neural Networks Cheatsheet](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
