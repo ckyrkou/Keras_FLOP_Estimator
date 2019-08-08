@@ -53,7 +53,7 @@ plt.show()
 
 ```
 
-![VGG16 timings][Figures/VGG16_timings.png]
+<img src="./Figures/VGG16_timings.png" width="256">
 
 # Resources:
 1. [Convolutional Neural Networks Cheatsheet](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
