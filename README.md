@@ -17,7 +17,7 @@ model = MobileNet(weights=None, include_top=True, pooling=None,input_shape=(224,
 model.summary()
 
 #Prints a table with the FLOPS at each layer and total FLOPs
-net_flops(model)
+net_flops(model,table=True)
 
 ```
 
