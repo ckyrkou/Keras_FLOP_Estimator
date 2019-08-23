@@ -57,7 +57,7 @@ Total FLOPS (x 10^-6): 30946.65011200
 Total MACC (x 10^-6): 15470264320.00000000
 ```
 
-<img>
+[./Figures/MACCs.png]
 
 
 # Keras Model Timing Performannce Per Layer
