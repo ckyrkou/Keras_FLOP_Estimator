@@ -38,12 +38,8 @@ conv_dw_1_relu |   [112, 112, 32] |   [112, 112, 32] |           [0, 0] |       
 .
 .
 
-Total MFLOPS: 1148.07359200 Total MACS: 574.03679600
+Total MFLOPS: 551.47646256
 ```
-The output is in close agreement with what has been reported in the litereture for MobileNet V1 in terms of MACS
-
-
-<img src="./Figures/MobileNetV1_MACS.jpg">
 
 # Keras Model Timing Performannce Per Layer
 
