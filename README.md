@@ -11,9 +11,11 @@ This is a function for estimating the floating point operations (FLOPS) of deep 
 
 ```python
 
+from keras.applications.resnet50 import ResNet50
+from keras.applications.vgg16 import VGG16
 from keras.applications.mobilenet import MobileNet
 
-model = MobileNet(weights=None, include_top=True, pooling=None,input_shape=(224,224,3))
+model = VGG16(weights=None, include_top=True, pooling=None,input_shape=(224,224,3))
 model.summary()
 
 #Prints a table with the FLOPS at each layer and total FLOPs
@@ -55,6 +57,7 @@ Total FLOPS (x 10^-6): 30946.65011200
 Total MACC (x 10^-6): 15470264320.00000000
 ```
 
+<img>
 
 
 # Keras Model Timing Performannce Per Layer
