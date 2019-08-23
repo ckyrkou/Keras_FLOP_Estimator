@@ -76,6 +76,10 @@ plt.show()
 
 <img src="./Figures/VGG16_timings.png" width="512">
 
+# Disclaimer:
+
+This code is provided as is and there might be some errors especially with the timing as it depends on many factors. In many papers the same number can be reporter under either FLOPs or MACCs. By definition these two quantities are not the same and care must be taken as to which one you want to report and compare against. For example MobileNetV1 paper it is reported to have ~569 MACCs in the paper. However, many leaderboarding sites put this metric under FLOPS which may also include other operations. In the provided function, FLOPS can be any operation such as multiply  
+
 # Resources:
 1. [Convolutional Neural Networks Cheatsheet](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
 2. [How fast is my model?](https://machinethink.net/blog/how-fast-is-my-model/)
