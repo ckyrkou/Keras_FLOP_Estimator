@@ -38,7 +38,7 @@ net_flops(model,table=True)
 .
 .
 
-Total MFLOPS: 551.47646256
+Total FLOPS (x 10^-6): 551.47646256
 ```
 
 # Keras Model Timing Performannce Per Layer
