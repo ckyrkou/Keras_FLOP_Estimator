@@ -54,7 +54,7 @@ net_flops(model,table=True)
 Total FLOPS (x 10^6): 30.94665011200
 
 
-Total MACC (x 10^6): 15.470264320.
+Total MACC (x 10^6): 15.470264320
 ```
 
 <img src="./Figures/MACCs.png" width="150">
