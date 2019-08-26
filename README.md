@@ -51,10 +51,10 @@ net_flops(model,table=True)
                       fc2 |             4096 |           [4096] |           [0, 0] |           [0, 0] | [1, 1] | 33554432.0000
               predictions |             4096 |           [1000] |           [0, 0] |           [0, 0] | [1, 1] | 8192000.0000
 
-Total FLOPS (x 10^-6): 30946.65011200
+Total FLOPS (x 10^6): 30946.65011200
 
 
-Total MACC (x 10^-6): 15470264320.00000000
+Total MACC (x 10^6): 15470264320.00000000
 ```
 
 <img src="./Figures/MACCs.png" width="150">
