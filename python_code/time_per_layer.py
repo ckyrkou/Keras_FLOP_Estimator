@@ -5,7 +5,8 @@
 # __/..(...|.(...|
 # /__.-|_|--|_|
 #
-# Christos Kyrkou, 2019
+# Christos Kyrkou, PhD
+# 2019
 
 # Measure time per layer in keras
 

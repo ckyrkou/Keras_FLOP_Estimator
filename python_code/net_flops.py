@@ -5,7 +5,8 @@
 # __/..(...|.(...|
 # /__.-|_|--|_|
 #
-# Christos Kyrkou, 2019
+# Christos Kyrkou, PhD
+# 2019
 
 # Estimator for model FLOPS in keras
 # Use: net_flops(model, table=False)
