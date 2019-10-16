@@ -1,4 +1,13 @@
+#                    __
+#                  / *_)
+#       _.----. _ /../
+#     /............./
+# __/..(...|.(...|
+# /__.-|_|--|_|
+#
+# Christos Kyrkou, 2019
 
+# Estimator for model FLOPS in keras
 # Use: net_flops(model, table=False)
 
 #Supported Layers: Conv2D, DepthwiseConv2D, SeparableConv2D, Activation, BatchNormalization, InputLayer, Reshape, Add, Maximum,
