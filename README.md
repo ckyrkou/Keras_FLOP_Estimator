@@ -14,6 +14,7 @@ This is a function for estimating the floating point operations (FLOPS) of deep 
 from keras.applications.resnet50 import ResNet50
 from keras.applications.vgg16 import VGG16
 from keras.applications.mobilenet import MobileNet
+from net_flops import net_flops
 
 model = VGG16(weights=None, include_top=True, pooling=None,input_shape=(224,224,3))
 model.summary()
