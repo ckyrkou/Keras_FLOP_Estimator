@@ -60,7 +60,7 @@ Total MACC (x 10^6): 15.470264320
 
 <img src="./Figures/MACCs.png" width="150">
 
-# Keras Model Timing Performannce Per Layer
+# Keras Model Timing Performance Per Layer
 
 This is a function for estimating the timing performance of each leayer in a neural network. It can be used to identify the bottlenecks in computation when run on the target device. The function iterates over the network by runninng an input image through it by removing each of the layers. The layer time is found by subtracting the current run without the last layer from the previous run that contained the layer. There are some timing issues where the timings are off a bit thus some times may appear as negative. In such, case the layer compute time can be considered as negligible.
 
@@ -102,4 +102,4 @@ This code is provided as is and there might be some errors especially with the t
 # Resources:
 1. [Convolutional Neural Networks Cheatsheet](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
 2. [How fast is my model?](https://machinethink.net/blog/how-fast-is-my-model/)
-3. [3 Small But Powerful Convolutional Networks](https://towardsdatascience.com/3-small-but-powerful-convolutional-networks-27ef86faa42d)
+3. [Small But Powerful Convolutional Networks](https://towardsdatascience.com/3-small-but-powerful-convolutional-networks-27ef86faa42d)
