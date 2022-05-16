@@ -127,7 +127,7 @@ def net_flops(model, table=False):
                 filters = i_shape[2]
 
             flops = 2 * (
-                    (ks[0] * ks[1] * i_shape[2]) * ((i_shape[0] / strides[0]) * (i_shape[1] / strides[1]))) / factor
+                    (ks[0] * ks[1] * i_shape[2]) * ((i_shape[0] / strides[0]) * (i_shape[1] / strides[1]))) 
             macc = flops / 2
 
         t_macc += macc
